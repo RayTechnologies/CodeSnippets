@@ -1,0 +1,17 @@
+learnedwords = []
+wordresponses = []
+
+def main():
+    uinput = raw_input('>>> ')
+    if uinput in learnedwords:
+        whichnum = learnedwords.index(uinput)
+        print('[CPU] ' + wordresponses[whichnum])
+        main()
+    else:
+        learnedwords.append(uinput)
+        print'[CPU] How should I respond to, ' + uinput + '?'
+        learn = raw_input('Response >>> ')
+        wordresponses.append(learn)
+        main()
+main()
+        
